@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multi-Page Survey on cricket</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+
+<body onload="showPage(1)">
+    <div class="page" id="page1">
+        <h1>Welcome to Our Survey!</h1>
+        <div class="question">
+            <label>Full Name :</label>
+            <input type="text" id="question1_1" placeholder="Name" required>
+            <label>Email : </label>
+            <input type="text" id="question1_2" placeholder="Enter email " required>
+            <label>User id :</label>
+            <input type="text" id="question1_3" placeholder="Create User Id">
+            <label> Country :</label>
+            <input type="text" id="question1_3" placeholder="Country">
+            <label>Gender :</label>
+            <input type="text" id="question1_4" placeholder="Enter only if you want to disclose">
+        </div>
+        <button onclick="saveDataAndMoveNext(1)">Next</button>
+    </div>
+
+    <div class="page" id="page2">
+        <h1>Share Your Thoughts</h1>
+        <div class="question">
+            <label>Player you like? :</label>
+            <input type="text" id="question1_1" placeholder="Fav player name">
+            <label>Player Country :</label>
+            <input type="text" id="question1_2" placeholder="Nation">
+            <label>IPL team </label>
+            <input type="text" id="question1_3" placeholder="Fav IPL team " required>
+            <label> Rating :</label>
+            <input type="text" id="question1_4" placeholder="On a scale of [0-10] on survey">
+            <label>Feedback :</label>
+            <textarea id="question1_5" cols="30" rows="10" placeholder="Give your feedback on survey"></textarea>
+        </div>
+        <button onclick="moveToPreviousPage(2)">Previous</button>
+        <button onclick="saveDataAndMoveNext(2)">Next</button>
+    </div>
+    <div class="page" style="display: none" id="page3">
+        <h1>Thankyou,Survey Completed !</h1>
+        <h2>Your inputs are Stored...</h2>
+    </div>
+</body>
+
+</html>
